@@ -11,7 +11,7 @@ export const products: Product[] = [
       '/images/jerseys/BONJOUR_FRONT.jpg',
       '/images/jerseys/BONJOUR_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'XS', available: true },
       { name: 'S', available: true },
@@ -37,7 +37,7 @@ export const products: Product[] = [
       '/images/jerseys/DRAPFR_FRONT.jpg',
       '/images/jerseys/DRAPFR_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
@@ -61,7 +61,7 @@ export const products: Product[] = [
       '/images/jerseys/FESTIF_FRONT.jpg',
       '/images/jerseys/FESTIF_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
@@ -86,7 +86,7 @@ export const products: Product[] = [
       '/images/jerseys/FLEURBLUE_FRONT.jpg',
       '/images/jerseys/FLEURBLUE_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'XS', available: true },
       { name: 'S', available: true },
@@ -111,7 +111,7 @@ export const products: Product[] = [
       '/images/jerseys/FR1992_FRONT.jpg',
       '/images/jerseys/FR1992_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
@@ -135,7 +135,7 @@ export const products: Product[] = [
       '/images/jerseys/hanoifc2023FRONT.jpg',
       '/images/jerseys/hanoifc2023BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
@@ -160,7 +160,7 @@ export const products: Product[] = [
       '/images/jerseys/HCM_FRONT.jpg',
       '/images/jerseys/HCM_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
@@ -184,7 +184,7 @@ export const products: Product[] = [
       '/images/jerseys/ILES_FRONT.jpg',
       '/images/jerseys/ILES_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'XS', available: true },
       { name: 'S', available: true },
@@ -209,7 +209,7 @@ export const products: Product[] = [
       '/images/jerseys/MERCI_FRONT.jpg',
       '/images/jerseys/MERCI_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
@@ -234,7 +234,7 @@ export const products: Product[] = [
       '/images/jerseys/ORANGE_FRONT.jpg',
       '/images/jerseys/ORANGE_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
@@ -258,7 +258,7 @@ export const products: Product[] = [
       '/images/jerseys/PANTHERCOPY_FRONT.jpg',
       '/images/jerseys/PANTHERCOPY_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
@@ -282,7 +282,7 @@ export const products: Product[] = [
       '/images/jerseys/PANTHERhead_FRONT.jpg',
       '/images/jerseys/PANTHERhead_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
@@ -307,7 +307,7 @@ export const products: Product[] = [
       '/images/jerseys/SUPERHEROS_FRONT.jpg',
       '/images/jerseys/SUPERHEROS_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'XS', available: true },
       { name: 'S', available: true },
@@ -332,7 +332,7 @@ export const products: Product[] = [
       '/images/jerseys/TRIANGLES_FRONT.jpg',
       '/images/jerseys/TRIANGLES_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
@@ -356,7 +356,7 @@ export const products: Product[] = [
       '/images/jerseys/ZIGCOLOR_FRONT.jpg',
       '/images/jerseys/ZIGCOLOR_BACK.jpg',
     ],
-    category: 'soccer',
+    category: 'football',
     sizes: [
       { name: 'XS', available: true },
       { name: 'S', available: true },

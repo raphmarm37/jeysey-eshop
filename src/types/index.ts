@@ -5,7 +5,7 @@ export interface Product {
   description: string;
   price: number; // in cents to avoid floating point issues
   images: string[];
-  category: 'football' | 'basketball' | 'baseball' | 'soccer' | 'hockey';
+  category: 'football' | 'basketball' | 'baseball' | 'handball' | 'hockey';
   sizes: Size[];
   colors: Color[];
   inStock: boolean;

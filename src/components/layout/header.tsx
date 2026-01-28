@@ -21,7 +21,10 @@ export function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/products">Shop</NavLink>
+            <NavLink href="/products">All Jerseys</NavLink>
+            <NavLink href="/products?category=football">Football</NavLink>
+            <NavLink href="/products?category=basketball">Basketball</NavLink>
+            <NavLink href="/products?category=handball">Handball</NavLink>
           </nav>
 
           {/* Cart Button */}
