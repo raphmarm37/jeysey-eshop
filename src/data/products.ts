@@ -8,8 +8,8 @@ export const products: Product[] = [
       'A vibrant French-inspired design featuring the iconic "Bonjour" greeting. Perfect for showing off your love for French culture and style.',
     price: 7999,
     images: [
-      '/images/jerseys/BONJOUR_FRONT.jpg',
-      '/images/jerseys/BONJOUR_BACK.jpg',
+      '/images/football/BONJOUR_FRONT.jpg',
+      '/images/football/BONJOUR_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -34,8 +34,8 @@ export const products: Product[] = [
       'Show your French pride with this stunning tricolor design. Features the iconic blue, white, and red of the French flag.',
     price: 8499,
     images: [
-      '/images/jerseys/DRAPFR_FRONT.jpg',
-      '/images/jerseys/DRAPFR_BACK.jpg',
+      '/images/football/DRAPFR_FRONT.jpg',
+      '/images/football/DRAPFR_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -58,8 +58,8 @@ export const products: Product[] = [
       'Celebrate in style with this festive design. Bold colors and dynamic patterns make this perfect for any occasion.',
     price: 7499,
     images: [
-      '/images/jerseys/FESTIF_FRONT.jpg',
-      '/images/jerseys/FESTIF_BACK.jpg',
+      '/images/football/FESTIF_FRONT.jpg',
+      '/images/football/FESTIF_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -83,8 +83,8 @@ export const products: Product[] = [
       'Elegant floral pattern on a stunning blue background. A unique design that combines sport and art.',
     price: 8999,
     images: [
-      '/images/jerseys/FLEURBLUE_FRONT.jpg',
-      '/images/jerseys/FLEURBLUE_BACK.jpg',
+      '/images/football/FLEURBLUE_FRONT.jpg',
+      '/images/football/FLEURBLUE_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -108,8 +108,8 @@ export const products: Product[] = [
       'A nostalgic tribute to the classic 1992 French football era. Vintage styling with modern comfort.',
     price: 9499,
     images: [
-      '/images/jerseys/FR1992_FRONT.jpg',
-      '/images/jerseys/FR1992_BACK.jpg',
+      '/images/football/FR1992_FRONT.jpg',
+      '/images/football/FR1992_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -132,8 +132,8 @@ export const products: Product[] = [
       'Official style Hanoi FC jersey from the 2023 season. Represent Vietnamese football with pride.',
     price: 7999,
     images: [
-      '/images/jerseys/hanoifc2023FRONT.jpg',
-      '/images/jerseys/hanoifc2023BACK.jpg',
+      '/images/football/hanoifc2023FRONT.jpg',
+      '/images/football/hanoifc2023BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -157,8 +157,8 @@ export const products: Product[] = [
       'Inspired by the vibrant energy of Ho Chi Minh City. Modern design with Vietnamese flair.',
     price: 7999,
     images: [
-      '/images/jerseys/HCM_FRONT.jpg',
-      '/images/jerseys/HCM_BACK.jpg',
+      '/images/football/HCM_FRONT.jpg',
+      '/images/football/HCM_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -181,8 +181,8 @@ export const products: Product[] = [
       'Transport yourself to tropical islands with this vacation-inspired design. Beach vibes meet sports style.',
     price: 7499,
     images: [
-      '/images/jerseys/ILES_FRONT.jpg',
-      '/images/jerseys/ILES_BACK.jpg',
+      '/images/football/ILES_FRONT.jpg',
+      '/images/football/ILES_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -206,8 +206,8 @@ export const products: Product[] = [
       'Express gratitude in style with this "Merci" themed jersey. A meaningful design with French elegance.',
     price: 7999,
     images: [
-      '/images/jerseys/MERCI_FRONT.jpg',
-      '/images/jerseys/MERCI_BACK.jpg',
+      '/images/football/MERCI_FRONT.jpg',
+      '/images/football/MERCI_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -231,8 +231,8 @@ export const products: Product[] = [
       'Stand out from the crowd with this bold orange design. High visibility meets high style.',
     price: 6999,
     images: [
-      '/images/jerseys/ORANGE_FRONT.jpg',
-      '/images/jerseys/ORANGE_BACK.jpg',
+      '/images/football/ORANGE_FRONT.jpg',
+      '/images/football/ORANGE_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -255,8 +255,8 @@ export const products: Product[] = [
       'Channel the power and grace of the panther with this fierce design. Bold graphics for bold players.',
     price: 8499,
     images: [
-      '/images/jerseys/PANTHERCOPY_FRONT.jpg',
-      '/images/jerseys/PANTHERCOPY_BACK.jpg',
+      '/images/football/PANTHERCOPY_FRONT.jpg',
+      '/images/football/PANTHERCOPY_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -279,8 +279,8 @@ export const products: Product[] = [
       'Featuring a striking panther head graphic. Aggressive styling for those who play with intensity.',
     price: 8499,
     images: [
-      '/images/jerseys/PANTHERhead_FRONT.jpg',
-      '/images/jerseys/PANTHERhead_BACK.jpg',
+      '/images/football/PANTHERhead_FRONT.jpg',
+      '/images/football/PANTHERhead_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -304,8 +304,8 @@ export const products: Product[] = [
       'Unleash your inner hero with this comic-inspired design. Bold colors and dynamic graphics for champions.',
     price: 8999,
     images: [
-      '/images/jerseys/SUPERHEROS_FRONT.jpg',
-      '/images/jerseys/SUPERHEROS_BACK.jpg',
+      '/images/football/SUPERHEROS_FRONT.jpg',
+      '/images/football/SUPERHEROS_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -329,8 +329,8 @@ export const products: Product[] = [
       'Modern geometric design with interlocking triangles. Contemporary style for the fashion-forward player.',
     price: 7499,
     images: [
-      '/images/jerseys/TRIANGLES_FRONT.jpg',
-      '/images/jerseys/TRIANGLES_BACK.jpg',
+      '/images/football/TRIANGLES_FRONT.jpg',
+      '/images/football/TRIANGLES_BACK.jpg',
     ],
     category: 'football',
     sizes: [
@@ -353,8 +353,8 @@ export const products: Product[] = [
       'Eye-catching zigzag pattern with vibrant colors. A playful design that brings energy to the field.',
     price: 7499,
     images: [
-      '/images/jerseys/ZIGCOLOR_FRONT.jpg',
-      '/images/jerseys/ZIGCOLOR_BACK.jpg',
+      '/images/football/ZIGCOLOR_FRONT.jpg',
+      '/images/football/ZIGCOLOR_BACK.jpg',
     ],
     category: 'football',
     sizes: [
