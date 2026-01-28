@@ -30,12 +30,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Link href="/products">
                   <Button size="lg" className="bg-white text-black hover:bg-gray-200">
-                    Shop All Jerseys
-                  </Button>
-                </Link>
-                <Link href="/products?category=football">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-                    Football Collection
+                    Shop Collection
                   </Button>
                 </Link>
               </div>
@@ -78,18 +73,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Categories Banner */}
+        {/* CTA Banner */}
         <section className="bg-gray-100 dark:bg-gray-900 py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-              Shop by Sport
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Unique Designs, Premium Quality
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <CategoryCard name="Football" href="/products?category=football" />
-              <CategoryCard name="Basketball" href="/products?category=basketball" />
-              <CategoryCard name="Soccer" href="/products?category=soccer" />
-              <CategoryCard name="Hockey" href="/products?category=hockey" />
-            </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+              Each jersey in our collection features exclusive designs you won&apos;t find anywhere else.
+              Made with high-quality materials for comfort and durability.
+            </p>
+            <Link href="/products">
+              <Button size="lg">Browse All 15 Jerseys</Button>
+            </Link>
           </div>
         </section>
 
@@ -131,19 +127,6 @@ export default function Home() {
 
       <Footer />
     </div>
-  );
-}
-
-function CategoryCard({ name, href }: { name: string; href: string }) {
-  return (
-    <Link
-      href={href}
-      className="group relative aspect-square bg-gray-200 dark:bg-gray-800 rounded-xl overflow-hidden flex items-center justify-center hover:ring-2 ring-black dark:ring-white transition-all"
-    >
-      <span className="text-xl font-bold group-hover:scale-110 transition-transform">
-        {name}
-      </span>
-    </Link>
   );
 }
 

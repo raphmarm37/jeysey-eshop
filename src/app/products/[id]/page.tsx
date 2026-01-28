@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/footer";
 import { getProductById, products } from "@/data/products";
 import { formatPrice } from "@/lib/utils";
 import { AddToCartSection } from "./add-to-cart-section";
+import { ImageGallery } from "./image-gallery";
 
 interface ProductPageProps {
   params: Promise<{ id: string }>;
@@ -30,14 +31,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <main className="flex-1 py-8 md:py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {/* Product Image */}
-            <div className="aspect-[3/4] bg-gray-100 dark:bg-gray-900 rounded-2xl overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center">
-                <span className="text-8xl font-bold text-gray-300 dark:text-gray-700">
-                  {product.name.charAt(0)}
-                </span>
-              </div>
-            </div>
+            {/* Product Images */}
+            <ImageGallery images={product.images} productName={product.name} />
 
             {/* Product Info */}
             <div className="flex flex-col">

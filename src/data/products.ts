@@ -1,61 +1,91 @@
 import { Product } from '@/types';
 
-// Mock product data - replace with database in production
 export const products: Product[] = [
   {
-    id: 'jersey-001',
-    name: 'Classic Striped Football Jersey',
+    id: 'bonjour',
+    name: 'Bonjour Jersey',
     description:
-      'A timeless design featuring bold horizontal stripes. Made with breathable mesh fabric for maximum comfort during gameplay or casual wear.',
-    price: 7999, // $79.99
-    images: ['/images/jerseys/striped-football-1.jpg'],
-    category: 'football',
+      'A vibrant French-inspired design featuring the iconic "Bonjour" greeting. Perfect for showing off your love for French culture and style.',
+    price: 7999,
+    images: [
+      '/images/jerseys/BONJOUR_FRONT.jpg',
+      '/images/jerseys/BONJOUR_BACK.jpg',
+    ],
+    category: 'soccer',
+    sizes: [
+      { name: 'XS', available: true },
+      { name: 'S', available: true },
+      { name: 'M', available: true },
+      { name: 'L', available: true },
+      { name: 'XL', available: true },
+      { name: 'XXL', available: true },
+    ],
+    colors: [
+      { name: 'Original', hex: '#2563eb', available: true },
+    ],
+    inStock: true,
+    featured: true,
+    createdAt: new Date('2024-01-08'),
+  },
+  {
+    id: 'drapfr',
+    name: 'French Flag Jersey',
+    description:
+      'Show your French pride with this stunning tricolor design. Features the iconic blue, white, and red of the French flag.',
+    price: 8499,
+    images: [
+      '/images/jerseys/DRAPFR_FRONT.jpg',
+      '/images/jerseys/DRAPFR_BACK.jpg',
+    ],
+    category: 'soccer',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
       { name: 'L', available: true },
       { name: 'XL', available: true },
-      { name: 'XXL', available: false },
     ],
     colors: [
-      { name: 'Navy/White', hex: '#1e3a5f', available: true },
-      { name: 'Red/Black', hex: '#8b0000', available: true },
-      { name: 'Green/Gold', hex: '#228b22', available: true },
+      { name: 'Tricolor', hex: '#0055a4', available: true },
     ],
     inStock: true,
     featured: true,
-    createdAt: new Date('2024-01-15'),
+    createdAt: new Date('2024-01-08'),
   },
   {
-    id: 'jersey-002',
-    name: 'Urban Basketball Jersey',
+    id: 'festif',
+    name: 'Festif Party Jersey',
     description:
-      'Street-inspired design with modern geometric patterns. Lightweight and moisture-wicking, perfect for the court or the streets.',
-    price: 6999, // $69.99
-    images: ['/images/jerseys/urban-basketball-1.jpg'],
-    category: 'basketball',
+      'Celebrate in style with this festive design. Bold colors and dynamic patterns make this perfect for any occasion.',
+    price: 7499,
+    images: [
+      '/images/jerseys/FESTIF_FRONT.jpg',
+      '/images/jerseys/FESTIF_BACK.jpg',
+    ],
+    category: 'soccer',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
       { name: 'L', available: true },
       { name: 'XL', available: true },
+      { name: 'XXL', available: true },
     ],
     colors: [
-      { name: 'Black/Gold', hex: '#000000', available: true },
-      { name: 'White/Purple', hex: '#ffffff', available: true },
-      { name: 'Chicago Red', hex: '#ce1141', available: true },
+      { name: 'Multicolor', hex: '#ec4899', available: true },
     ],
     inStock: true,
-    featured: true,
-    createdAt: new Date('2024-02-01'),
+    featured: false,
+    createdAt: new Date('2024-01-11'),
   },
   {
-    id: 'jersey-003',
-    name: 'Retro Soccer Kit',
+    id: 'fleurblue',
+    name: 'Blue Flower Jersey',
     description:
-      'Vintage-inspired soccer jersey with a modern fit. Features classic collar design and embroidered badge placeholder.',
-    price: 8499, // $84.99
-    images: ['/images/jerseys/retro-soccer-1.jpg'],
+      'Elegant floral pattern on a stunning blue background. A unique design that combines sport and art.',
+    price: 8999,
+    images: [
+      '/images/jerseys/FLEURBLUE_FRONT.jpg',
+      '/images/jerseys/FLEURBLUE_BACK.jpg',
+    ],
     category: 'soccer',
     sizes: [
       { name: 'XS', available: true },
@@ -65,81 +95,285 @@ export const products: Product[] = [
       { name: 'XL', available: true },
     ],
     colors: [
-      { name: 'Sky Blue', hex: '#87ceeb', available: true },
-      { name: 'Classic White', hex: '#f5f5f5', available: true },
-      { name: 'Forest Green', hex: '#228b22', available: true },
+      { name: 'Blue Floral', hex: '#1e40af', available: true },
     ],
     inStock: true,
     featured: true,
-    createdAt: new Date('2024-02-15'),
+    createdAt: new Date('2024-01-09'),
   },
   {
-    id: 'jersey-004',
-    name: 'Pro Baseball Jersey',
+    id: 'fr1992',
+    name: 'France 1992 Retro',
     description:
-      'Traditional button-up baseball jersey with raglan sleeves. Premium quality fabric with reinforced stitching.',
-    price: 8999, // $89.99
-    images: ['/images/jerseys/pro-baseball-1.jpg'],
-    category: 'baseball',
+      'A nostalgic tribute to the classic 1992 French football era. Vintage styling with modern comfort.',
+    price: 9499,
+    images: [
+      '/images/jerseys/FR1992_FRONT.jpg',
+      '/images/jerseys/FR1992_BACK.jpg',
+    ],
+    category: 'soccer',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
-      { name: 'L', available: false },
+      { name: 'L', available: true },
       { name: 'XL', available: true },
     ],
     colors: [
-      { name: 'Pinstripe White', hex: '#f8f8ff', available: true },
-      { name: 'Away Grey', hex: '#808080', available: true },
+      { name: 'Retro Blue', hex: '#1d4ed8', available: true },
     ],
     inStock: true,
-    featured: false,
-    createdAt: new Date('2024-03-01'),
+    featured: true,
+    createdAt: new Date('2024-01-11'),
   },
   {
-    id: 'jersey-005',
-    name: 'Ice Hockey Home Jersey',
+    id: 'hanoifc',
+    name: 'Hanoi FC 2023',
     description:
-      'Authentic hockey jersey design with fight strap and reinforced elbows. Made for both on-ice performance and fan wear.',
-    price: 12999, // $129.99
-    images: ['/images/jerseys/hockey-home-1.jpg'],
-    category: 'hockey',
+      'Official style Hanoi FC jersey from the 2023 season. Represent Vietnamese football with pride.',
+    price: 7999,
+    images: [
+      '/images/jerseys/hanoifc2023FRONT.jpg',
+      '/images/jerseys/hanoifc2023BACK.jpg',
+    ],
+    category: 'soccer',
     sizes: [
+      { name: 'S', available: true },
       { name: 'M', available: true },
       { name: 'L', available: true },
       { name: 'XL', available: true },
       { name: 'XXL', available: true },
     ],
     colors: [
-      { name: 'Home Red', hex: '#c41e3a', available: true },
-      { name: 'Away White', hex: '#ffffff', available: true },
+      { name: 'Hanoi Red', hex: '#dc2626', available: true },
     ],
     inStock: true,
     featured: false,
-    createdAt: new Date('2024-03-10'),
+    createdAt: new Date('2024-01-11'),
   },
   {
-    id: 'jersey-006',
-    name: 'Limited Edition Gold Jersey',
+    id: 'hcm',
+    name: 'Ho Chi Minh City Jersey',
     description:
-      'Exclusive limited edition design with metallic gold accents. Only 100 pieces made. Certificate of authenticity included.',
-    price: 14999, // $149.99
-    images: ['/images/jerseys/limited-gold-1.jpg'],
-    category: 'football',
+      'Inspired by the vibrant energy of Ho Chi Minh City. Modern design with Vietnamese flair.',
+    price: 7999,
+    images: [
+      '/images/jerseys/HCM_FRONT.jpg',
+      '/images/jerseys/HCM_BACK.jpg',
+    ],
+    category: 'soccer',
     sizes: [
       { name: 'S', available: true },
       { name: 'M', available: true },
       { name: 'L', available: true },
+      { name: 'XL', available: true },
     ],
     colors: [
-      { name: 'Metallic Gold', hex: '#ffd700', available: true },
+      { name: 'City Colors', hex: '#ea580c', available: true },
+    ],
+    inStock: true,
+    featured: false,
+    createdAt: new Date('2024-01-11'),
+  },
+  {
+    id: 'iles',
+    name: 'Islands Paradise Jersey',
+    description:
+      'Transport yourself to tropical islands with this vacation-inspired design. Beach vibes meet sports style.',
+    price: 7499,
+    images: [
+      '/images/jerseys/ILES_FRONT.jpg',
+      '/images/jerseys/ILES_BACK.jpg',
+    ],
+    category: 'soccer',
+    sizes: [
+      { name: 'XS', available: true },
+      { name: 'S', available: true },
+      { name: 'M', available: true },
+      { name: 'L', available: true },
+      { name: 'XL', available: true },
+    ],
+    colors: [
+      { name: 'Tropical', hex: '#0891b2', available: true },
+    ],
+    inStock: true,
+    featured: false,
+    createdAt: new Date('2024-01-11'),
+  },
+  {
+    id: 'merci',
+    name: 'Merci Gratitude Jersey',
+    description:
+      'Express gratitude in style with this "Merci" themed jersey. A meaningful design with French elegance.',
+    price: 7999,
+    images: [
+      '/images/jerseys/MERCI_FRONT.jpg',
+      '/images/jerseys/MERCI_BACK.jpg',
+    ],
+    category: 'soccer',
+    sizes: [
+      { name: 'S', available: true },
+      { name: 'M', available: true },
+      { name: 'L', available: true },
+      { name: 'XL', available: true },
+      { name: 'XXL', available: true },
+    ],
+    colors: [
+      { name: 'Classic', hex: '#6366f1', available: true },
+    ],
+    inStock: true,
+    featured: false,
+    createdAt: new Date('2024-01-11'),
+  },
+  {
+    id: 'orange',
+    name: 'Orange Blaze Jersey',
+    description:
+      'Stand out from the crowd with this bold orange design. High visibility meets high style.',
+    price: 6999,
+    images: [
+      '/images/jerseys/ORANGE_FRONT.jpg',
+      '/images/jerseys/ORANGE_BACK.jpg',
+    ],
+    category: 'soccer',
+    sizes: [
+      { name: 'S', available: true },
+      { name: 'M', available: true },
+      { name: 'L', available: true },
+      { name: 'XL', available: true },
+    ],
+    colors: [
+      { name: 'Blaze Orange', hex: '#f97316', available: true },
     ],
     inStock: true,
     featured: true,
-    createdAt: new Date('2024-04-01'),
+    createdAt: new Date('2024-01-08'),
+  },
+  {
+    id: 'panthercopy',
+    name: 'Panther Spirit Jersey',
+    description:
+      'Channel the power and grace of the panther with this fierce design. Bold graphics for bold players.',
+    price: 8499,
+    images: [
+      '/images/jerseys/PANTHERCOPY_FRONT.jpg',
+      '/images/jerseys/PANTHERCOPY_BACK.jpg',
+    ],
+    category: 'soccer',
+    sizes: [
+      { name: 'S', available: true },
+      { name: 'M', available: true },
+      { name: 'L', available: true },
+      { name: 'XL', available: true },
+    ],
+    colors: [
+      { name: 'Panther Black', hex: '#171717', available: true },
+    ],
+    inStock: true,
+    featured: false,
+    createdAt: new Date('2024-01-11'),
+  },
+  {
+    id: 'pantherhead',
+    name: 'Panther Head Jersey',
+    description:
+      'Featuring a striking panther head graphic. Aggressive styling for those who play with intensity.',
+    price: 8499,
+    images: [
+      '/images/jerseys/PANTHERhead_FRONT.jpg',
+      '/images/jerseys/PANTHERhead_BACK.jpg',
+    ],
+    category: 'soccer',
+    sizes: [
+      { name: 'S', available: true },
+      { name: 'M', available: true },
+      { name: 'L', available: true },
+      { name: 'XL', available: true },
+      { name: 'XXL', available: true },
+    ],
+    colors: [
+      { name: 'Night Black', hex: '#0a0a0a', available: true },
+    ],
+    inStock: true,
+    featured: false,
+    createdAt: new Date('2024-01-08'),
+  },
+  {
+    id: 'superheros',
+    name: 'Superhero Edition Jersey',
+    description:
+      'Unleash your inner hero with this comic-inspired design. Bold colors and dynamic graphics for champions.',
+    price: 8999,
+    images: [
+      '/images/jerseys/SUPERHEROS_FRONT.jpg',
+      '/images/jerseys/SUPERHEROS_BACK.jpg',
+    ],
+    category: 'soccer',
+    sizes: [
+      { name: 'XS', available: true },
+      { name: 'S', available: true },
+      { name: 'M', available: true },
+      { name: 'L', available: true },
+      { name: 'XL', available: true },
+    ],
+    colors: [
+      { name: 'Hero Colors', hex: '#dc2626', available: true },
+    ],
+    inStock: true,
+    featured: true,
+    createdAt: new Date('2024-01-11'),
+  },
+  {
+    id: 'triangles',
+    name: 'Geometric Triangles Jersey',
+    description:
+      'Modern geometric design with interlocking triangles. Contemporary style for the fashion-forward player.',
+    price: 7499,
+    images: [
+      '/images/jerseys/TRIANGLES_FRONT.jpg',
+      '/images/jerseys/TRIANGLES_BACK.jpg',
+    ],
+    category: 'soccer',
+    sizes: [
+      { name: 'S', available: true },
+      { name: 'M', available: true },
+      { name: 'L', available: true },
+      { name: 'XL', available: true },
+    ],
+    colors: [
+      { name: 'Geometric', hex: '#8b5cf6', available: true },
+    ],
+    inStock: true,
+    featured: false,
+    createdAt: new Date('2024-01-11'),
+  },
+  {
+    id: 'zigcolor',
+    name: 'Zigzag Colors Jersey',
+    description:
+      'Eye-catching zigzag pattern with vibrant colors. A playful design that brings energy to the field.',
+    price: 7499,
+    images: [
+      '/images/jerseys/ZIGCOLOR_FRONT.jpg',
+      '/images/jerseys/ZIGCOLOR_BACK.jpg',
+    ],
+    category: 'soccer',
+    sizes: [
+      { name: 'XS', available: true },
+      { name: 'S', available: true },
+      { name: 'M', available: true },
+      { name: 'L', available: true },
+      { name: 'XL', available: true },
+      { name: 'XXL', available: true },
+    ],
+    colors: [
+      { name: 'Rainbow Zig', hex: '#eab308', available: true },
+    ],
+    inStock: true,
+    featured: false,
+    createdAt: new Date('2024-01-08'),
   },
 ];
 
-// Helper functions to work with products
 export function getProductById(id: string): Product | undefined {
   return products.find((p) => p.id === id);
 }

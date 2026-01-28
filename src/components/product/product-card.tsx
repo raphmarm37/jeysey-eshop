@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Product } from "@/types";
 import { formatPrice, cn } from "@/lib/utils";
 
@@ -8,27 +9,38 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const isOutOfStock = !product.inStock;
+  const frontImage = product.images[0];
+  const backImage = product.images[1];
 
   return (
-    <Link
-      href={`/products/${product.id}`}
-      className="group block"
-    >
+    <Link href={`/products/${product.id}`} className="group block">
       <article className="relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-900">
-        {/* Image Container */}
         <div className="aspect-[3/4] relative overflow-hidden">
-          {/* Placeholder - in production, use next/image with real photos */}
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-700">
-            <span className="text-4xl font-bold text-gray-400 dark:text-gray-600">
-              {product.name.charAt(0)}
-            </span>
-          </div>
+          {/* Front Image */}
+          <Image
+            src={frontImage}
+            alt={product.name}
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            className={cn(
+              "object-cover transition-opacity duration-300",
+              backImage && "group-hover:opacity-0"
+            )}
+          />
 
-          {/* Hover overlay */}
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+          {/* Back Image (shown on hover) */}
+          {backImage && (
+            <Image
+              src={backImage}
+              alt={`${product.name} back`}
+              fill
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          )}
 
           {/* Badges */}
-          <div className="absolute top-3 left-3 flex flex-col gap-2">
+          <div className="absolute top-3 left-3 flex flex-col gap-2 z-10">
             {product.featured && (
               <span className="px-2 py-1 text-xs font-medium bg-black text-white rounded dark:bg-white dark:text-black">
                 Featured
@@ -42,24 +54,17 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         </div>
 
-        {/* Product Info */}
         <div className="p-4">
-          {/* Category */}
           <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
             {product.category}
           </p>
 
-          {/* Name */}
           <h3 className="font-semibold text-gray-900 group-hover:text-black transition-colors dark:text-gray-100 dark:group-hover:text-white">
             {product.name}
           </h3>
 
-          {/* Price */}
-          <p className="mt-1 text-lg font-bold">
-            {formatPrice(product.price)}
-          </p>
+          <p className="mt-1 text-lg font-bold">{formatPrice(product.price)}</p>
 
-          {/* Color Options */}
           <div className="mt-3 flex items-center gap-1">
             {product.colors.slice(0, 4).map((color) => (
               <span
