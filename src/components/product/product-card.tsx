@@ -14,35 +14,32 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Link href={`/products/${product.id}`} className="group block">
-      <article className="relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-900">
-        <div className="aspect-[3/4] relative overflow-hidden">
-          {/* Front Image */}
+      <article className="theme-card relative overflow-hidden rounded-xl">
+        <div className="aspect-[3/4] relative overflow-hidden bg-[var(--muted)]">
           <Image
             src={frontImage}
             alt={product.name}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             className={cn(
-              "object-cover transition-opacity duration-300",
+              "object-cover transition-all duration-300 group-hover:scale-105",
               backImage && "group-hover:opacity-0"
             )}
           />
 
-          {/* Back Image (shown on hover) */}
           {backImage && (
             <Image
               src={backImage}
               alt={`${product.name} back`}
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              className="object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
             />
           )}
 
-          {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-2 z-10">
             {product.featured && (
-              <span className="px-2 py-1 text-xs font-medium bg-black text-white rounded dark:bg-white dark:text-black">
+              <span className="px-2 py-1 text-xs font-medium bg-[var(--accent)] text-white rounded">
                 Featured
               </span>
             )}
@@ -55,22 +52,22 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         <div className="p-4">
-          <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
+          <p className="text-xs font-medium text-[var(--muted-foreground)] uppercase tracking-wide mb-1">
             {product.category}
           </p>
 
-          <h3 className="font-semibold text-gray-900 group-hover:text-black transition-colors dark:text-gray-100 dark:group-hover:text-white">
+          <h3 className="font-semibold transition-colors">
             {product.name}
           </h3>
 
-          <p className="mt-1 text-lg font-bold">{formatPrice(product.price)}</p>
+          <p className="mt-1 text-lg font-bold theme-text-accent">{formatPrice(product.price)}</p>
 
           <div className="mt-3 flex items-center gap-1">
             {product.colors.slice(0, 4).map((color) => (
               <span
                 key={color.name}
                 className={cn(
-                  "w-4 h-4 rounded-full border border-gray-300",
+                  "w-4 h-4 rounded-full border border-[var(--border)]",
                   !color.available && "opacity-40"
                 )}
                 style={{ backgroundColor: color.hex }}
@@ -78,7 +75,7 @@ export function ProductCard({ product }: ProductCardProps) {
               />
             ))}
             {product.colors.length > 4 && (
-              <span className="text-xs text-gray-500 ml-1">
+              <span className="text-xs text-[var(--muted-foreground)] ml-1">
                 +{product.colors.length - 4}
               </span>
             )}

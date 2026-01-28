@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCart } from "@/lib/cart-context";
 import { CartIcon } from "@/components/icons";
+import { ThemeSwitcher } from "@/components/theme/theme-switcher";
 import { NAV_CATEGORIES } from "@/data/categories";
 
 export function Header() {
@@ -29,18 +30,22 @@ export function Header() {
             ))}
           </nav>
 
-          <button
-            onClick={toggleCart}
-            className="relative p-2 hover:bg-gray-100 rounded-lg transition-colors dark:hover:bg-gray-800"
-            aria-label={`Shopping cart with ${totalItems} items`}
-          >
-            <CartIcon />
-            {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-black text-xs font-medium text-white dark:bg-white dark:text-black">
-                {totalItems > 99 ? "99+" : totalItems}
-              </span>
-            )}
-          </button>
+          <div className="flex items-center gap-2">
+            <ThemeSwitcher />
+
+            <button
+              onClick={toggleCart}
+              className="relative p-2 hover:bg-gray-100 rounded-lg transition-colors dark:hover:bg-gray-800"
+              aria-label={`Shopping cart with ${totalItems} items`}
+            >
+              <CartIcon />
+              {totalItems > 0 && (
+                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-black text-xs font-medium text-white dark:bg-white dark:text-black">
+                  {totalItems > 99 ? "99+" : totalItems}
+                </span>
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </header>
