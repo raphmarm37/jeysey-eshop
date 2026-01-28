@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ProductCard } from "@/components/product/product-card";
 import { products, getProductsByCategory } from "@/data/products";
+import { ALL_CATEGORY_FILTERS, isValidCategory, CATEGORY_LABELS } from "@/data/categories";
 
 interface ProductsPageProps {
   searchParams: Promise<{ category?: string }>;
@@ -12,12 +13,12 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   const params = await searchParams;
   const category = params.category;
 
-  const filteredProducts = category
-    ? getProductsByCategory(category as 'football' | 'basketball' | 'baseball' | 'handball' | 'hockey')
+  const filteredProducts = category && isValidCategory(category)
+    ? getProductsByCategory(category)
     : products;
 
-  const categoryTitle = category
-    ? `${category.charAt(0).toUpperCase() + category.slice(1)} Jerseys`
+  const categoryTitle = category && isValidCategory(category)
+    ? `${CATEGORY_LABELS[category]} Jerseys`
     : "All Jerseys";
 
   return (
@@ -33,14 +34,15 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             </p>
           </div>
 
-          {/* Category Filters */}
           <div className="flex flex-wrap gap-2 mb-8">
-            <CategoryFilter label="All" href="/products" active={!category} />
-            <CategoryFilter label="Football" href="/products?category=football" active={category === "football"} />
-            <CategoryFilter label="Basketball" href="/products?category=basketball" active={category === "basketball"} />
-            <CategoryFilter label="Handball" href="/products?category=handball" active={category === "handball"} />
-            <CategoryFilter label="Hockey" href="/products?category=hockey" active={category === "hockey"} />
-            <CategoryFilter label="Baseball" href="/products?category=baseball" active={category === "baseball"} />
+            {ALL_CATEGORY_FILTERS.map((filter) => (
+              <CategoryFilter
+                key={filter.label}
+                label={filter.label}
+                href={filter.href}
+                active={filter.category ? category === filter.category : !category}
+              />
+            ))}
           </div>
 
           {filteredProducts.length > 0 ? (
@@ -65,15 +67,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   );
 }
 
-function CategoryFilter({
-  label,
-  href,
-  active,
-}: {
-  label: string;
-  href: string;
-  active: boolean;
-}) {
+function CategoryFilter({ label, href, active }: { label: string; href: string; active: boolean }) {
   return (
     <Link
       href={href}

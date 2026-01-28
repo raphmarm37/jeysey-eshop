@@ -1,12 +1,9 @@
-/**
- * Format a price in cents to a display string
- * @param cents - Price in cents (e.g., 7999 for $79.99)
- * @returns Formatted string (e.g., "$79.99")
- */
+import { PRICING, SITE } from './config';
+
 export function formatPrice(cents: number): string {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'USD',
+    currency: SITE.currency,
   }).format(cents / 100);
 }
 
@@ -34,16 +31,11 @@ export function truncate(text: string, maxLength: number): string {
   return text.slice(0, maxLength - 3) + '...';
 }
 
-/**
- * Calculate cart totals
- */
 export function calculateCartTotals(
   subtotal: number
 ): { subtotal: number; shipping: number; tax: number; total: number } {
-  // Free shipping over $100
-  const shipping = subtotal >= 10000 ? 0 : 999; // $9.99 shipping
-  // 8% tax (example rate)
-  const tax = Math.round(subtotal * 0.08);
+  const shipping = subtotal >= PRICING.FREE_SHIPPING_THRESHOLD ? 0 : PRICING.STANDARD_SHIPPING;
+  const tax = Math.round(subtotal * PRICING.TAX_RATE);
   const total = subtotal + shipping + tax;
 
   return { subtotal, shipping, tax, total };
