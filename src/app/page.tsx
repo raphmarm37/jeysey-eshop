@@ -132,6 +132,7 @@ function CategoryCard({ name, href, emoji }: { name: string; href: string; emoji
     <Link
       href={href}
       className="group theme-card relative aspect-square rounded-xl overflow-hidden flex flex-col items-center justify-center gap-2 hover:scale-[1.02] transition-all"
+      style={{ backgroundColor: 'var(--card)' }}
     >
       <span className="text-4xl group-hover:scale-110 transition-transform">{emoji}</span>
       <span className="text-lg font-bold">{name}</span>
@@ -141,7 +142,7 @@ function CategoryCard({ name, href, emoji }: { name: string; href: string; emoji
 
 function ValueProp({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="theme-card rounded-xl p-6 text-center">
+    <div className="theme-card rounded-xl p-6 text-center" style={{ backgroundColor: 'var(--card)' }}>
       <div className="w-12 h-12 bg-[var(--accent)] text-white rounded-full flex items-center justify-center mx-auto mb-4">
         {icon}
       </div>

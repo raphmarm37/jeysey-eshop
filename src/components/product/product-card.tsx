@@ -51,7 +51,7 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         </div>
 
-        <div className="p-4">
+        <div className="p-4" style={{ backgroundColor: 'var(--card)' }}>
           <p className="text-xs font-medium text-[var(--muted-foreground)] uppercase tracking-wide mb-1">
             {product.category}
           </p>
