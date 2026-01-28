@@ -14,10 +14,10 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-black text-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <section className="relative bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800 text-white">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
             <div className="max-w-2xl">
-              <p className="text-sm font-medium uppercase tracking-widest text-gray-400 mb-4">
+              <p className="text-sm font-medium uppercase tracking-widest text-blue-400 mb-4">
                 New Collection 2026
               </p>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
@@ -29,12 +29,12 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/products">
-                  <Button size="lg" className="bg-white text-black hover:bg-gray-200">
+                  <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
                     Shop All Jerseys
                   </Button>
                 </Link>
                 <Link href="/products?category=football">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
                     Football Collection
                   </Button>
                 </Link>
@@ -42,8 +42,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Decorative gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent pointer-events-none" />
+          {/* Decorative pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.2),transparent_50%)]" />
+          </div>
         </section>
 
         {/* Featured Products */}
